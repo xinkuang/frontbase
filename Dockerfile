@@ -22,12 +22,9 @@ RUN apt-get update && apt-get install -y \
         netcat \
         net-tools \
         locales \
-        python2.7 \
-        python-pip \
         openssh-client \
         ca-certificates && \
         rm -rf /var/lib/apt/lists/* \
-    && pip install pymysql==0.9.2 pyyaml==3.13 -i https://mirrors.aliyun.com/pypi/simple/ \
     && chown -R www-data:www-data /usr/local/openresty /var/run/openresty
 # Nginx conf
 ADD default.conf /etc/nginx/conf.d/default.conf
