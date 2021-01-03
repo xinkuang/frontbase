@@ -11,8 +11,7 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
     sed -i 's http://.*.debian.org http://mirrors.aliyun.com g' /etc/apt/sources.list
 
 # Fix base image
-RUN set -x \
-    apt-get update && apt-get install -y \
+RUN  apt-get update && apt-get install -y \
         libidn2-0 \
         vim \
         tar \
